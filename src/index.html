@@ -7,9 +7,12 @@
     <title>Facebook</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/facebook-logo.png" type="image/x-icon">
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/0d8fc5be45.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <main class="container">
+        <button id="button-mode"><i class="fas fa-moon"></i></button>
         <div class="container-conteudo">
             <div class="container-text">
                 <h1 class="title">facebook</h1>
@@ -17,8 +20,11 @@
             </div>
             <div class="container-form">
                 <form action="" class="form">
-                    <input type="text" name="" id="" required placeholder="Email or telephone">
-                    <input type="password" name="" id="" required placeholder="Password">
+                    <input type="text" name="" id="mail" required placeholder="Email or telephone">
+                    <div class="password">
+                        <input type="password" name="" class="input-pass" id="password" required placeholder="Password">
+                        <span id="show-pass"></span> <!-- Acrescentar class="eye" e "Mostar" como conteudo -->
+                    </div>
                     <button id="login">Entrar</button>
                     <a href="#" id="link-pass">Esqueceu a senha?</a>
                     <div class="division"></div>
