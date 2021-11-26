@@ -5,21 +5,32 @@ const darkMode = document.querySelector(`#button-mode`).addEventListener(`click`
     modePage.classList.toggle(`active`)
 })
 
+//Show pass
 
+const pass = document.querySelector(`#password`)
 
-// Show Password
+pass.addEventListener(`keyup`, () => {
+    const passInput = document.querySelector(`.pass`)
+    const value = passInput.value
+    const showPass = document.querySelector(`.show-pass`)
+    let conteudo
+    if (value.length > 0) {
+        showPass.classList.add(`eye`)
+        conteudo = document.querySelector(`.eye`)
+        conteudo.textContent = `Mostrar`
+        showPass.addEventListener(`click`, () => {
+            if (conteudo.textContent == `Mostrar`) {
+                conteudo.textContent = `Ocultar`
+                passInput.type = `text`
+            } else if (conteudo.textContent == `Ocultar`) {
+                conteudo.textContent = `Mostrar`
+                passInput.type = `password`
+            }   
+        })
+    } else if (value.length < 1) {
+        conteudo = document.querySelector(`.eye`)
+        conteudo.textContent = ``
+        showPass.classList.remove(`eye`)
+    }
+})
 
-
-
-// const pass = document.querySelector(`#password`)
-
-// pass.addEventListener(`focus`, () => {
-    
-// })
-
-
-
-// const showPass = document.querySelector(`#show-pass`)
-//     showPass.classList.toggle(`eye`)
-//     let conteudo = document.querySelector(`.eye`)
-//     conteudo.innerHTML = `Mostrar`

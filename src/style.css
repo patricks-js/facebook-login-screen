@@ -80,7 +80,7 @@
     width: 20px;
     height: 20px;
     position: absolute;
-    right: 60px;
+    right: 57px;
     cursor: pointer;
     color: var(--colorTitle);
 }
@@ -120,19 +120,6 @@
     height: 1px;
     border-bottom: 1px solid #DDDFE2;
 }
-
-#button-mode {
-    width: 40px;
-    height: 40px;
-    background-color: #1C1E21;
-    color: #DDDFE2;
-    position: fixed;
-    top: 5px;
-    left: 5px;
-    cursor: pointer;
-    border-radius: 50%;
-}
-
 
 
 /* Texts */
@@ -177,6 +164,18 @@
 
 /* Dark mode */
 
+#button-mode {
+    width: 40px;
+    height: 40px;
+    background-color: #1C1E21;
+    color: #DDDFE2;
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
 .active {
     transition: .3s;
     background-color: #1C1E21;
@@ -204,13 +203,17 @@
     color: #DDDFE2;
 }
 
+/* End Dark Mode */
+
 @media (max-width: 768px) {
+    .container {
+        height: 100%;
+    }
     .container-conteudo {
         flex-direction: column;
     }
     .container-text {
         text-align: center;
         width: 100%;
-        margin-bottom: 20px;
     }
 }
