@@ -19,16 +19,16 @@ pass.addEventListener(`keyup`, () => {
         conteudo = document.querySelector(`.eye`)
         conteudo.textContent = `Mostrar`
         showPass.addEventListener(`click`, () => {
-            if (conteudo.textContent == `Mostrar`) {
+            passInput.type = `text`
+            if (conteudo.textContent == `Mostrar` ) {
                 conteudo.textContent = `Ocultar`
                 passInput.type = `text`
-            } else if (conteudo.textContent == `Ocultar`) {
+            } else {
                 conteudo.textContent = `Mostrar`
                 passInput.type = `password`
             }   
         })
     } else if (value.length < 1) {
-        conteudo = document.querySelector(`.eye`)
         conteudo.textContent = ``
         showPass.classList.remove(`eye`)
     }
