@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --fontTitle:  'Outfit', sans-serif;
+    --colorButtonBlue: #1878F3;
+    --colorButtonBlueHover: #166FE5;
+    --colorButtonGreen: #42B72A;
+    --colorButtonGreenHover: #36A420;
+    --colorTitle: #478DFF;
+    --colorBackground: #F0F2F5;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--colorBackground);
+}
+
+.container-conteudo {
+    height: 100%;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container-form {
+    width: 24.75rem;
+}
+
+.form {
+    width: 100%;
+    height: 21.812rem;
+    background-color: white;
+    border-radius: 7px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.159);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.form input, button {
+    height: 52px;
+    width: 90%;
+    border-radius: 5px;
+    border: none;
+    outline: 1px solid #DDDFE2;
+}
+
+/* Inputs */
+
+.form input {
+    padding: 0 10px;
+    font-size: 1.1rem;
+}
+
+.form input:focus {
+    outline-color: #1878F3;
+}
+
+/* Buttons */
+
+#login, #new-account {
+    background-color: var(--colorButtonBlue);
+    font: normal bold 1.3rem Arial;
+    color: white;
+    height: 48px;
+    cursor: pointer;
+    transition: .2s;
+    padding: 5px;
+}
+
+#login:hover {
+    background-color: var(--colorButtonBlueHover); 
+}
+
+#new-account {
+    width: 43%;
+    background-color: var(--colorButtonGreen);
+    font-size: 1.1rem;
+}
+
+#new-account:hover {
+    background-color: var(--colorButtonGreenHover);
+}
+
+.division {
+    width: 90%;
+    height: 1px;
+    border-bottom: 1px solid #DDDFE2;
+}
+
+/* Texts */
+
+.container-text {
+    width: 31rem;
+    height: 22rem;
+}
+
+.title {
+    font: normal bold 3.5rem var(--fontTitle);
+    color: var(--colorTitle);
+}
+
+.title-h2 {
+    font: normal normal 1.75rem/2rem var(--fontTitle);
+    color: #1C1E21;
+}
+
+/* Links */
+
+#link-pass {
+    color: var(--colorTitle);
+}
+
+#link-pass:hover {
+    text-decoration: underline;
+}
+
+#crate-page {
+    margin: 40px 0 0 0;
+    text-align: center;
+}
+
+#crate-page a {
+    color: black;
+}
+
+#crate-page a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .container-conteudo {
+        flex-direction: column;
+    }
+}
